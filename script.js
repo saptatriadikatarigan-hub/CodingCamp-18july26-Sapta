@@ -1,15 +1,9 @@
 var greetingEl = document.getElementById('greeting');
 var clockEl    = document.getElementById('clock');
 
-// =============================================
-// SUARA - pakai file MP3 yang tersedia
-// =============================================
-
-// music-box untuk checkbox (suara ringan/lembut)
 var suaraCheckboxAudio = new Audio('freesound_community-music-box-98027.mp3');
 suaraCheckboxAudio.volume = 0.6;
 
-// crumple untuk hapus (suara membuang)
 var suaraHapusAudio = new Audio('freesound_community-crumple-03-40747.mp3');
 suaraHapusAudio.volume = 0.6;
 
@@ -58,7 +52,6 @@ function tampilkanWaktu() {
   displayWaktu.textContent = menit + ':' + String(detik).padStart(2, '0');
 }
 
-// Tombol Start
 document.getElementById('start').addEventListener('click', function () {
   if (timerId !== null) return;
 
